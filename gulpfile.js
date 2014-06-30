@@ -1,11 +1,12 @@
-/**
- * Created by jim_at_jibba on 5/16/14.
- */
+
 //Load plugins
 var gulp = require('gulp'),
-    gutil= require('gulp-util')
-sass = require('gulp-ruby-sass'),
+    gutil= require('gulp-util'),
+    sass = require('gulp-ruby-sass'),
     prefixer = require('gulp-autoprefixer'),
+    concat = require('gulp-concat'),
+    stripDebug = require('gulp-strip-debug'),
+    uglify = require('gulp-uglify'),
     notify = require('gulp-notify');
 
 // Where do you store your Sass files?
@@ -14,6 +15,15 @@ var sassDir = 'scss';
 // Which directory should Sass compile to?
 var targetCSSDir = 'dist/css';
 
+// Where do you store your Bower files?
+var bowerDir = 'bower_components';
+
+// Where do you store your JS files?
+var jsDir = 'js';
+
+// Which directory should Sass compile to?
+var targetjsDir = 'dist/js';
+
 //Styles
 gulp.task('styles', function(){
     return gulp.src(sassDir + '/styles.scss')
@@ -21,6 +31,19 @@ gulp.task('styles', function(){
         .pipe(prefixer('last 10 version'))
         .pipe(gulp.dest(targetCSSDir))
         .pipe(notify({ message: 'All done, oh great one!'}));
+});
+
+// JS concat, strip debugging and minify
+gulp.task('scripts', function() {
+    gulp.src([
+        bowerDir + '/foundation/js/foundation.min.js',
+        bowerDir + '/flexslider/jquery.flexslider-min.js',
+        jsDir + '/app.js'
+        ])
+        .pipe(concat('script.js'))
+        .pipe(stripDebug())
+        .pipe(uglify())
+        .pipe(gulp.dest(targetjsDir));
 });
 
 // Keep an eye on Sass files for changes...
