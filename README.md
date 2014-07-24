@@ -1,5 +1,5 @@
 
-static starter template
+Static starter template
 ===============================
 
 This is how I start all my projects. Bower and npm make it easy to install packages (like Foundation or Bootstrap) and keep them up to date.
@@ -31,3 +31,7 @@ n.b - included scss and the scss file structure is set and ready to go.
 * Flexbox Lightbox
 * Flexslider by Woo
 * Font Awesome Icon Fonts
+
+## Thanks
+
+Gulp file taken and adapted from https://github.com/greypants/gulp-starter - fully awesome.
