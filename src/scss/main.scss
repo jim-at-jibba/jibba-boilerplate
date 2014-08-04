@@ -1,0 +1,116 @@
+// justjibba scss structure | MIT License | github.com/jasonreece/css-burrito
+
+/*************************************************************************************
+* Main.scss
+* Contains an import section for libraries, core, and modules, the inbox,
+* and a shame section for quick fixes and hacks
+*************************************************************************************/
+
+/*************************************************************************************
+*Libraries
+*************************************************************************************/
+
+// ----- Reset - Normalize.css ----- //
+// @import "base/normalize";
+
+// ----- Bourbon ----- //
+//@import "bourbon/bourbon";
+
+// ----- Font-awesome ----- //
+@import "libs/font-awesome/_font-awesome";
+
+// ----- Foundation ----- //
+@import "settings";
+@import "../../bower_components/foundation/scss/foundation";
+
+// Or selectively include components
+//@import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+/*************************************************************************************
+* Core
+*************************************************************************************/
+
+// ----- Variables - base, color, typography ----- //
+@import "helpers/variables";
+
+// ----- Functions ----- //
+@import "helpers/functions";
+
+// ----- Mixins ----- //
+@import "helpers/mixins";
+
+// ----- helper styles ----- //
+@import "helpers/helpers";
+
+// ----- Typogaphy - base, color, typography ----- //
+@import "base/typography";
+
+// ----- grid ----- //
+@import "layout/grid";
+
+// ----- header ----- //
+@import "layout/header";
+
+// ----- navigation ----- //
+@import "layout/navigation";
+
+// ----- footer ----- //
+@import "layout/footer";
+
+// ----- Modules - Imports all module  ----- //
+@import "base/modules";
+
+// ----- Mixins ----- //
+@import "base/components";
+
+// ----- Pages - Imports all Pages  ----- //
+@import "base/pages";
+
+
+/*************************************************************************************
+* Inbox
+*************************************************************************************/
+
+// ----- The inbox allows developers, and those not actively working on the CSS, 
+// to quickly add styles that are easily seen by the maintainer of the file.
+
+
+/*************************************************************************************
+* Shame
+*************************************************************************************/
+// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
