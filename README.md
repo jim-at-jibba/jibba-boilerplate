@@ -2,6 +2,9 @@
 Static starter template
 ===============================
 
+# No upto date. Will update soon
+
+
 This is how I start all my projects. Bower and npm make it easy to install packages (like Foundation or Bootstrap) and keep them up to date.
 Gulp is awesome and allows you to run common tasks prgramically from the CLI. Huge increase in speed.
 
