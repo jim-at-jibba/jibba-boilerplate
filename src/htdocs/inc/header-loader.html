@@ -1,0 +1,60 @@
+<?php session_start();
+
+    /*
+      assign the right prefix for each page/file
+    */
+    $lvl = substr_count($_SERVER['PHP_SELF'],'/')-1; // change to -1 before deploy to server
+    $prefix = '';
+    $str = '../';
+
+    for ($i=0; $i < $lvl; $i++) {
+      $prefix .= $str;
+    }
+?>
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Meta information pulled from each template -->
+    <title><?php echo $page_title; ?></title>
+    <meta name="description" content="<?php echo $page_description; ?>">
+    <meta name="keywords" content="<?php echo $page_keywords; ?>">
+
+    <!-- Complete list of icons for all tablets and mobile devices -->
+    <!-- For standard Browser -->
+    <link rel="icon" href="<?php echo $prefix; ?>/img/icons/favicon.png">
+    <!-- non-retina iPhone pre iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon57.png" sizes="57x57">
+    <!-- non-retina iPad pre iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon72.png" sizes="72x72">
+    <!-- non-retina iPad iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon76.png" sizes="76x76">
+    <!-- retina iPhone pre iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon114.png" sizes="114x114">
+    <!-- retina iPhone iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon120.png" sizes="120x120">
+    <!-- retina iPad pre iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon144.png" sizes="144x144">
+    <!-- retina iPad iOS 7 -->
+    <link rel="apple-touch-icon" href="<?php echo $prefix; ?>/img/icons/icon152.png" sizes="152x152">
+    <!-- Win8 tile -->
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    <meta name="msapplication-TileColor" content="#B20099"/>
+    <meta name="application-name" content="name"/>
+
+    <!-- Styles compilled from SASS. If any changes are needed. Make sure you make the changes locally and recompile to CSS -->
+    <link rel="stylesheet" href="<?php echo $prefix; ?>css/styles.css"/>
+
+    <!-- If any changes are needed please add them in this file and I will add them to the scss files later. -->
+    <link rel="stylesheet" href="<?php echo $prefix; ?>css/temp.css"/>
+
+    <!-- This is a custom build of modernizr - built on 18/07/2014 -->
+    <script src="<?php echo $prefix; ?>js/modernizr.js"></script>
+
+    <!--PACE loader-->
+    <script src="<?php echo $prefix; ?>js/pace.min.js"></script>
+
+
+</head>

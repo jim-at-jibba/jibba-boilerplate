@@ -1,1 +1,37 @@
-This is your index page
+<?php
+    $page_title = 'Page Title | goes | here';
+    $page_description = "Description Goes here";
+    $page_keywords = "Keywords Go here";
+    include_once "inc/header-loader.html";
+?>
+<body id="home">
+<!-- THis is the Navigation Include -->
+<?php include_once "inc/navigation.html"; ?>
+<div class="regionwrap banner">
+    <div class="flexslider">
+        <ul class="slides">
+            <li><img src="" alt=""/></li>
+        </ul>
+    </div>
+</div>
+<!-- /.regionwrap.banner -->
+<div class="regionwrap mainContent">
+    <div class="row">
+        <div class="large-8 columns">
+
+        </div>
+        <div class="large-4">
+
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.regionwrap.mainContent -->
+
+<!-- Reusable footer content goes in this Include -->
+<?php include_once "inc/footer.html"; ?>
+
+<!-- All javscript pulled in with this include -->
+<?php include_once "inc/footer-loader.html"; ?>
+</body>
+</html>

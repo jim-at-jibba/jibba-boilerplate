@@ -3,7 +3,7 @@ var gulp       = require('gulp');
 var imagemin   = require('gulp-imagemin');
 
 gulp.task('images', function() {
-	var dest = './dist/img';
+	var dest = './dist/img'; // Image Destination
 
 	return gulp.src('./src/img/**')
 		.pipe(changed(dest)) // Ignore unchanged files
