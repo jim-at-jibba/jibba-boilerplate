@@ -1,25 +1,28 @@
-// justjibba scss structure | MIT License | github.com/jasonreece/css-burrito
+// justjibba grumpasaurus scss structure | MIT License | github.com/jim-at-jibba/grumpasaurus-scss
 
-/*************************************************************************************
-* Main.scss
-* Contains an import section for libraries, core, and modules, the inbox,
-* and a shame section for quick fixes and hacks
-*************************************************************************************/
+//----------------------------------------------------------------------------------*\
+// Main.scss
+// Contains an import section for libraries, core, and modules, the inbox,
+// and a shame section for quick fixes and hacks
+//----------------------------------------------------------------------------------*/
 
-/*************************************************************************************
-*Libraries
-*************************************************************************************/
+//----------------------------------*\
+// Reset - Normalize.css
+//----------------------------------*/
 
-// ----- Reset - Normalize.css ----- //
-// @import "base/normalize";
+ @import "base/normalize";
 
-// ----- Bourbon ----- //
+//----------------------------------*\
+// Optional Extras
+//----------------------------------*/
+
+// Bourbon - http://bourbon.io/
 //@import "bourbon/bourbon";
 
-// ----- Font-awesome ----- //
-@import "libs/font-awesome/_font-awesome";
+// Font-awesome - Install via bower
+//@import "libs/font-awesome/_font-awesome";
 
-// ----- Foundation ----- //
+// Foundation  - Install via bower
 @import "settings";
 @import "../../bower_components/foundation/scss/foundation";
 
@@ -61,56 +64,44 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-/*************************************************************************************
-* Core
-*************************************************************************************/
+//----------------------------------*\
+// CONFIG MODULES
+//----------------------------------*/
 
-// ----- Variables - base, color, typography ----- //
 @import "helpers/variables";
-
-// ----- Functions ----- //
 @import "helpers/functions";
-
-// ----- Mixins ----- //
 @import "helpers/mixins";
 
-// ----- helper styles ----- //
-@import "helpers/helpers";
+//----------------------------------*\
+// PARTIALS
+//----------------------------------*/
 
-// ----- Typogaphy - base, color, typography ----- //
-@import "base/typography";
-
-// ----- grid ----- //
+@import "base/components";
+@import "base/pages";
 @import "layout/grid";
-
-// ----- header ----- //
 @import "layout/header";
-
-// ----- navigation ----- //
 @import "layout/navigation";
-
-// ----- footer ----- //
 @import "layout/footer";
 
-// ----- Modules - Imports all module  ----- //
+//----------------------------------*\
+// OBJECTS & MODULES
+//----------------------------------*/
+
+@import "helpers/helpers";
+@import "base/typography";
 @import "base/modules";
 
-// ----- Mixins ----- //
-@import "base/components";
 
-// ----- Pages - Imports all Pages  ----- //
-@import "base/pages";
-
-
-/*************************************************************************************
-* Inbox
-*************************************************************************************/
+//----------------------------------------------------------------------------------*\
+// INBOX
+//----------------------------------------------------------------------------------*/
 
 // ----- The inbox allows developers, and those not actively working on the CSS, 
 // to quickly add styles that are easily seen by the maintainer of the file.
 
 
-/*************************************************************************************
-* Shame
-*************************************************************************************/
-// ----- Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
+//----------------------------------------------------------------------------------*\
+// SHAME
+//----------------------------------------------------------------------------------*/
+
+// Need to add a quick fix, hack, or questionable technique?  Add it here, fix it later.
