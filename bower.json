@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "foundation": "zurb/bower-foundation",
-    "jquery-colorbox": "~1.5.9",
-    "flexslider": "*"
+    "lightbox2": "~2.7.1",
+    "slick-carousel": "~1.3.15"
   }
 }
