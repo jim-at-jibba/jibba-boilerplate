@@ -14,7 +14,7 @@ var targetCSSDir = 'dist/css';
 //Styles
 gulp.task('styles', function(){
     return gulp.src(sassDir + '/styles.scss')
-        .pipe(sass({ style: 'extended' }).on('error', handleErrors))
+        .pipe(sass({ style: 'extended','sourcemap=none': true, }).on('error', handleErrors))
         .pipe(prefixer('last 10 version'))
         .pipe(gulp.dest(targetCSSDir))
         .pipe(notify({ message: 'All done, oh great one!'}));
