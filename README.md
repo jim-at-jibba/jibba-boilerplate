@@ -31,8 +31,8 @@ n.b - included scss and the scss file structure is set and ready to go.
 
 * Foundation
 * Modernizer
-* Flexbox Lightbox
-* Flexslider by Woo
+* Lightbox2 
+* Slick Carousel
 * Font Awesome Icon Fonts
 
 ## Thanks
