@@ -10,7 +10,7 @@ var handleErrors = require('../util/handleErrors');
 var sassDir = 'dev/scss';
 
 // Which directory should Sass compile to?
-var targetCSSDir = 'public/css';
+var targetCSSDir = 'dist/css';
 
 //Styles
 gulp.task('styles', function () {
