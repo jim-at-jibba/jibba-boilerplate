@@ -37,4 +37,4 @@ n.b - included scss and the scss file structure is set and ready to go.
 
 ## Thanks
 
-Gulp file taken and adapted from https://github.com/greypants/gulp-starter - fully awesome.
+
